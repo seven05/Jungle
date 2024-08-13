@@ -1,5 +1,5 @@
-N = input()
-N = int(N)
+import sys
+N = int(sys.stdin.readline().strip())
 
 def fact(n):
     if(n>0):
