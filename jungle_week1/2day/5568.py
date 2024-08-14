@@ -13,11 +13,11 @@ def permutation(arr, r):
     used = [0 for _ in range(len(arr))]
     def generate(chosen, used):
         if len(chosen) == r:
-            # pair = ""
-            # for k in range(r):
-            #     pair += chosen[k]
-            pick.append(chosen)
-            print(pick)
+            pair = ""
+            for k in range(r):
+                pair += chosen[k]
+            pick.append(pair)
+            # print(pick)
             return 
         for i in range(len(arr)):
             if not used[i]:
@@ -28,10 +28,10 @@ def permutation(arr, r):
                 chosen.pop()
     generate([], used)
 permutation(data,k)
-# print(pick)
+print(pick)
 result = []
 for val in pick:
     if val not in result:
         result.append(val)
-# print(result)
+print(result)
 print(len(result))
