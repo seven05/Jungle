@@ -9,6 +9,13 @@ def cal(arr):
     for i in range(1,len(arr)):
         result += (abs(arr[i-1]-arr[i]))
     return result
+all_array = list(permutations(data))
+# print(all_array)
+cal_max = 0
+for array in all_array:
+    cal_max = max(cal(array),cal_max)
+print(cal_max)
+
 # ----------최대-최소-최대-최소(답아님) ---------------
 # for i in range(N):
 #     if(i % 2 == 0):
@@ -36,9 +43,3 @@ def cal(arr):
 # permuta(data,N)
 # print(cal_max)
 # -------------------------------------------
-all_array = list(permutations(data))
-# print(all_array)
-cal_max = 0
-for array in all_array:
-    cal_max = max(cal(array),cal_max)
-print(cal_max)

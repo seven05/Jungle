@@ -10,14 +10,14 @@ data.sort()
 def get_distance(p1,p2): # 거리 제곱
     return (p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2
 
-def split(points):
+def find_closet_dist(points):
     if len(points) < 2:
         return float('inf')
     elif len(points) == 2:
         return get_distance(points[0], points[1])
     else:
         mid = len(points) // 2
-        min_dist = min(split(points[:mid]), split(points[mid:]))
+        min_dist = min(find_closet_dist(points[:mid]), find_closet_dist(points[mid:]))
         target_x = []
         # 중간선을 기준으로 min_dist 거리 내에 있는 점들을 모음
         for i in range(len(points)):
@@ -33,4 +33,4 @@ def split(points):
                 else:
                     break
         return min_dist
-print(split(data))
+print(find_closet_dist(data))
