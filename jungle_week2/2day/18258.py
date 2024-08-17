@@ -22,7 +22,6 @@ def pop():
         count -= 1
     else:
         print(-1)
-    
 
 def size():
     global count
