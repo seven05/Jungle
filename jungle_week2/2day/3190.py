@@ -9,4 +9,4 @@ L = int(sys.stdin.readline().strip())
 snake = []
 for i in range(L):
     snake.append(list(sys.stdin.readline().split()))
-print(apple,snake)
+# print(apple,snake)
