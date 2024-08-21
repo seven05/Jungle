@@ -12,8 +12,7 @@ for z in range(H):
             if row[x] == 1:  # 익은 토마토라면
                 queue.append((x, y, z))  # 큐에 추가 (BFS 시작점)
     tomato.append(box)
-# BFS에서 사용할 방향 벡터 (상하좌우앞뒤)
-dx = [1, -1, 0, 0, 0, 0]
+dx = [1, -1, 0, 0, 0, 0] 
 dy = [0, 0, 1, -1, 0, 0]
 dz = [0, 0, 0, 0, 1, -1]
 while queue:
