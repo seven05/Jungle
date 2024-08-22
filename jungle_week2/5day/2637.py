@@ -7,3 +7,4 @@ for _ in range(M):
     x, y, k = map(int,sys.stdin.readline().split())
     graph[y].append((x, k))  # y -> x (y를 만들기 위해 x가 k개 필요)
 print(graph)
+
